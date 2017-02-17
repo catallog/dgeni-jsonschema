@@ -1,0 +1,33 @@
+{
+  "title": "Component01",
+  "description": "Here goes this component01 description",
+  "type": "object",
+  "properties": {
+    "only-optional": {
+      "type": "array",
+      "description": "only-optional description"
+    },
+    "counter": {
+      "type": "int",
+      "description": "counter description"
+    },
+    "title": {
+      "type": "string",
+      "description": "title description"
+    },
+    "list": {
+      "type": "array",
+      "description": "list description"
+    },
+    "default-optional": {
+      "type": "string",
+      "default": "defaultValue",
+      "description": "default-optional description"
+    }
+  },
+  "required": [
+    "counter",
+    "list",
+    "title"
+  ]
+}
