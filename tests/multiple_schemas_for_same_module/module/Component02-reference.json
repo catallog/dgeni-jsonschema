@@ -1,0 +1,14 @@
+{
+  "title": "Component02",
+  "description": "Here goes this component02 description",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "title description"
+    }
+  },
+  "required": [
+    "title"
+  ]
+}
