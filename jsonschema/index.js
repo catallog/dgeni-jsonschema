@@ -6,7 +6,9 @@ module.exports = new Package('jsonschema', [
   require('dgeni-packages/jsdoc')
 ])
 
-.processor(require('./processors/formatJsonschema'))
+.factory(require('./services/param-formater'))
+
+.processor(require('./processors/format-jsonschema'))
 
 .config(config);
 

@@ -1,0 +1,33 @@
+{
+  "title": "multyParameterComponent",
+  "description": "Here goes this component description",
+  "type": "object",
+  "properties": {
+    "only-optional": {
+      "type": "array",
+      "description": "only-optional description"
+    },
+    "params": {
+      "type": "object",
+      "description": "counter description",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of this entry",
+          "default": "DefaultName"
+        },
+        "id":{
+          "type": "int",
+          "description": "ID of this entry"
+        }
+      },
+      "required":[
+        "id"
+      ]
+    }
+  },
+  "required": [
+    "params",
+    "title"
+  ]
+}
