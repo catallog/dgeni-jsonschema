@@ -1,6 +1,6 @@
 var extensions = require('../../lib/extensions');
 
-describe('Object as parameter: ', function(){
+describe('Array of objects: ', function(){
 
   beforeEach(extensions);
 

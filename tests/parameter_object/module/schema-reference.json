@@ -1,15 +1,15 @@
 {
-  "title": "multyParameterComponent",
+  "title": "deepParameterComponent",
   "description": "Here goes this component description",
   "type": "object",
   "properties": {
-    "only-optional": {
-      "type": "array",
-      "description": "only-optional description"
+    "title": {
+      "type": "string",
+      "description": "title description"
     },
     "params": {
       "type": "object",
-      "description": "counter description",
+      "description": "params description",
       "properties": {
         "name": {
           "type": "string",
@@ -19,10 +19,24 @@
         "id":{
           "type": "int",
           "description": "ID of this entry"
+        },
+        "subparam": {
+          "type": "object",
+          "description": "Subparam entry",
+          "required":[
+            "id"
+          ],
+          "properties":{
+            "id":{
+              "type": "int",
+              "description": "Subparam ID description"
+            }
+          }
         }
       },
       "required":[
-        "id"
+        "id",
+        "subparam"
       ]
     }
   },

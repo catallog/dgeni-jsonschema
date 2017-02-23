@@ -1,8 +1,8 @@
 var propertyIndex = {
   'object': require('./object'),
-  'string': require('./string'),
-  'int': require('./number'),
-  'number': require('./number'),
+  'string': require('./base'),
+  'int': require('./base'),
+  'number': require('./base'),
   'array': require('./array'),
 };
 

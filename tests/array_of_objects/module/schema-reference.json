@@ -1,0 +1,31 @@
+{
+  "title": "ArrayOfObjects",
+  "description": "Test an array of objects jsonschema",
+  "type": "object",
+  "properties": {
+    "employees": {
+      "type": "array",
+      "description": "The employees who are responsible for the project.",
+      "items": {
+        "type": "object",
+        "required":[
+          "name",
+          "department"
+        ],
+        "properties":{
+          "name":{
+            "type": "string",
+            "description": "The name of an employee."
+          },
+          "department":{
+            "type": "string",
+            "description": "The employee's department."
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "employees"
+  ]
+}
