@@ -1,8 +1,8 @@
 var baseFormater = require('./base');
 var paramsUtils = require('../utils/params');
 
-function buildObject(ref){
-  var base = baseFormater(ref);
+function proccess(ref){
+  var base = baseFormater.proccess(ref);
   paramsUtils.moveChildren(ref);
 
   base.data.type = paramsUtils.paramType(ref);
@@ -15,4 +15,21 @@ function buildObject(ref){
   return base;
 };
 
-module.exports = buildObject;
+function postProccess(ref){
+  if(ref.type == 'array' && ref.properties){
+    ref.items = Object.assign({}, {
+      required: ref.required,
+      properties: ref.properties,
+      type: 'object'
+    });
+
+    delete ref.properties;
+    delete ref.required;
+  }
+  return ref;
+}
+
+module.exports = {
+  proccess: proccess,
+  postProccess: postProccess
+};

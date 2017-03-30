@@ -9,8 +9,8 @@
       "items": {
         "type": "object",
         "required":[
-          "name",
-          "department"
+          "department",
+          "name"
         ],
         "properties":{
           "name":{

@@ -1,4 +1,4 @@
-module.exports = function(param) {
+function proccess(param) {
   function extractData(){
     var ret = {
       description: param.description,
@@ -14,4 +14,8 @@ module.exports = function(param) {
     data: extractData(),
     children: []
   };
+};
+
+module.exports = {
+  proccess: proccess
 };

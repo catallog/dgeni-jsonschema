@@ -1,7 +1,6 @@
 var properties = require('../properties');
 var paramsUtils = require('../utils/params');
 
-
 function extractRequired(root, next){
   if (!next.optional){
     root.required || (root.required = []);
@@ -18,7 +17,7 @@ function fn(param) {
     var PropertyFormater = properties[type];
 
     if(PropertyFormater) {
-      var formated = PropertyFormater(param);
+      var formated = PropertyFormater.proccess(param);
       var root = formated.data;
 
       if (formated.children.length){
@@ -28,6 +27,11 @@ function fn(param) {
           return base;
         }, {});
       }
+
+      if(PropertyFormater.postProccess){
+        root = PropertyFormater.postProccess(root);
+      }
+
       return root;
     } else {
       console.log("No property formater avaiable for type: ", type);

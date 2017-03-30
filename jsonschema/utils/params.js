@@ -63,8 +63,6 @@ function paramType(param){
     else
       ret = type;
   }
-
-  console.log('[', ret, ']', param.name);
   return ret;
 };
 
