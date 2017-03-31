@@ -19,9 +19,12 @@
     "url": "https://github.com/collabo-br/dgeni-jsonschema"
   },
   "devDependencies": {
-    "dgeni": "^0.4.7",
-    "dgeni-packages": "^0.16.7",
     "glob": "^7.1.1",
-    "jasmine": "^2.5.3"
+    "jasmine": "^2.5.3",
+    "jsondiffpatch": "^0.2.4"
+  },
+  "dependencies": {
+    "dgeni": "^0.4.7",
+    "dgeni-packages": "^0.16.7"
   }
 }

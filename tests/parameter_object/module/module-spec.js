@@ -1,6 +1,6 @@
 var extensions = require('../../lib/extensions');
 
-describe('Basic jsonschema generation:', function(){
+describe('Object as parameter: ', function(){
 
   beforeEach(extensions);
 

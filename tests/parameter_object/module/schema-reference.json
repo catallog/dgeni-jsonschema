@@ -1,0 +1,47 @@
+{
+  "title": "deepParameterComponent",
+  "description": "Here goes this component description",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "title description"
+    },
+    "params": {
+      "type": "object",
+      "description": "params description",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of this entry",
+          "default": "DefaultName"
+        },
+        "id":{
+          "type": "int",
+          "description": "ID of this entry"
+        },
+        "subparam": {
+          "type": "object",
+          "description": "Subparam entry",
+          "required":[
+            "id"
+          ],
+          "properties":{
+            "id":{
+              "type": "int",
+              "description": "Subparam ID description"
+            }
+          }
+        }
+      },
+      "required":[
+        "id",
+        "subparam"
+      ]
+    }
+  },
+  "required": [
+    "params",
+    "title"
+  ]
+}
