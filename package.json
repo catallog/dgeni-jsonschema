@@ -1,6 +1,6 @@
 {
   "name": "dgeni-jsonschema",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A dgeni package for generating jsonschemas from jsdoc documentation in source code",
   "main": "index.js",
   "scripts": {
